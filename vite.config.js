@@ -6,15 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    chunkSizeWarningLimit: 1000, // Suppress chunk size warnings (in kB)
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui': ['lucide-react'],
-          'pdf': ['jspdf', 'html2canvas'],
-        },
-      },
-    },
+    chunkSizeWarningLimit: 1000,
   },
 })
