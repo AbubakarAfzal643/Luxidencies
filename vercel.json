@@ -3,20 +3,5 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vite",
-  "outputDirectory": "dist",
-  "env": {
-    "VITE_APP_ENV": "production"
-  },
-  "git": {
-    "deploymentEnabled": {
-      "main": true
-    }
-  },
-  "regions": ["sfo1"],
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  }
+  "outputDirectory": "dist"
 }
