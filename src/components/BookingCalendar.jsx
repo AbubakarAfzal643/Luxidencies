@@ -1,21 +1,10 @@
 import { DayPicker } from 'react-day-picker'
-import { useEffect, useState } from 'react'
 import 'react-day-picker/style.css'
 import { getBookedDateMatchers } from '../utils/dateUtils'
 
 function BookingCalendar({ selectedRange, onSelectRange, bookings }) {
   const disabledDates = getBookedDateMatchers(bookings)
-  const [monthsToShow, setMonthsToShow] = useState(2)
-
-  useEffect(() => {
-    const updateMonths = () => {
-      setMonthsToShow(window.innerWidth < 900 ? 1 : 2)
-    }
-
-    updateMonths()
-    window.addEventListener('resize', updateMonths)
-    return () => window.removeEventListener('resize', updateMonths)
-  }, [])
+  const monthsToShow = 1
 
   return (
     <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">

@@ -22,7 +22,7 @@ function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const logoLetters = ['L', 'u', 'x', 'i', 'd', 'e', 'n', 'c', 'y']
+  const logoLetters = ['L', 'u', 'x', 'i', 'd', 'e', 'n', 'c', 'i', 'e', 's']
 
   const navLinkClass = ({ isActive }) =>
     `nav-link-underline relative inline-flex items-center px-3 py-2 text-sm font-medium tracking-[0.08em] uppercase transition ${
@@ -34,8 +34,8 @@ function Navbar() {
       className={`glass-navbar ${isSticky ? 'glass-navbar-scrolled' : ''}`}
     >
       <nav className="glass-navbar-inner" aria-label="Main navigation">
-        <Link to="/" className="brand-logo-link brand-logo-link-offset" aria-label="Luxidency home">
-          <span className="brand-logo" aria-label="Luxidency" role="img">
+        <Link to="/" className="brand-logo-link brand-logo-link-offset" aria-label="Luxidencies home">
+          <span className="brand-logo" aria-label="Luxidencies" role="img">
             {logoLetters.map((letter, index) => (
               <span
                 key={`${letter}-${index}`}

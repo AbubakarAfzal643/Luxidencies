@@ -27,20 +27,21 @@ function BookingForm({ apartment, dateRange, onSubmitBooking, isSubmitting, avai
     const nextErrors = {}
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     const phonePattern = /^[0-9+\-\s]{7,20}$/
+    const checkoutValidationMessage = 'Check-out date must be after check-in date.'
 
     if (!dateRange?.from || !dateRange?.to) {
       nextErrors.dates = 'Please select a check-in and check-out date.'
     }
 
     if (!form.fullName.trim()) nextErrors.fullName = 'Please enter your full name.'
-    if (!emailPattern.test(form.email)) nextErrors.email = 'Please enter a valid email address.'
+    if (form.email && !emailPattern.test(form.email)) nextErrors.email = 'Please enter a valid email address.'
     if (!phonePattern.test(form.phone)) nextErrors.phone = 'Please enter a valid phone number.'
     if (form.guests < 1 || form.guests > apartment.maxGuests) {
       nextErrors.guests = `Guests must be between 1 and ${apartment.maxGuests}.`
     }
 
     if (dateRange?.from && dateRange?.to && getNights(dateRange.from, dateRange.to) <= 0) {
-      nextErrors.dates = 'Check-out date must be after check-in.'
+      nextErrors.dates = checkoutValidationMessage
     }
 
     setErrors(nextErrors)
@@ -81,7 +82,12 @@ function BookingForm({ apartment, dateRange, onSubmitBooking, isSubmitting, avai
       </label>
 
       <label className="form-field">
-        Email
+        <span className="flex items-center gap-2">
+          Email
+          <span className="rounded-full border border-neutral-300 bg-neutral-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.12em] text-neutral-500">
+            Optional
+          </span>
+        </span>
         <input
           type="email"
           name="email"

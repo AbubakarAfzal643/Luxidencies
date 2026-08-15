@@ -56,13 +56,32 @@ function ApartmentDetailsPage() {
     }
   }, [apartment, dateRange])
 
+  const dateValidationMessage = 'Check-out date must be after check-in date.'
+
   const handleDateSelect = (range) => {
     setAvailabilityError('')
+
+    if (!range) {
+      setDateRange(undefined)
+      return
+    }
+
+    if (range.from && range.to && range.to <= range.from) {
+      setAvailabilityError(dateValidationMessage)
+      setDateRange({ from: range.from, to: undefined })
+      return
+    }
+
     setDateRange(range)
   }
 
   const handleBookingSubmit = async (formData) => {
     if (!apartment || !priceData) return
+
+    if (!dateRange?.from || !dateRange?.to || getNights(dateRange.from, dateRange.to) <= 0) {
+      setAvailabilityError(dateValidationMessage)
+      return
+    }
 
     setIsSubmitting(true)
 

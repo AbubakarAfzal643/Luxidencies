@@ -50,7 +50,10 @@ function Hero() {
               <Button variant="accent" className="hero-action-button cursor-pointer">Explore Apartments</Button>
             </Link>
             <a href="#how-booking-works">
-              <Button variant="ghost" className="hero-action-button cursor-pointer border-white/35 bg-white/10 text-white hover:bg-white/20">
+              <Button
+                variant="ghost"
+                className="hero-action-button cursor-pointer border border-white/25 bg-white/8 text-white shadow-[0_10px_28px_rgba(15,23,42,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-500 hover:bg-amber-500 hover:text-neutral-950 hover:shadow-[0_14px_30px_rgba(245,158,11,0.24)]"
+              >
                 How It Works
               </Button>
             </a>

@@ -94,14 +94,14 @@ function AboutPage() {
           <p className="section-kicker">About Luxidency</p>
           <h1>Comfortable apartment stays designed for modern living.</h1>
           <p>
-            Luxidency provides premium apartment accommodation for guests who want comfort, privacy, and a polished stay experience in a convenient location. We focus on thoughtfully selected apartments that combine modern appeal with practical ease for short stays, weekend escapes, and longer travel plans.
+            Luxidency brings together some of the best apartments in Murree, Islamabad, and Lahore, with a focus on comfort, privacy, and effortless city-to-mountain stays. From scenic escapes in Murree to polished city living in Islamabad and Lahore, our homes are chosen to make every trip feel easy, premium, and genuinely relaxing.
           </p>
           <div className="about-hero-actions">
             <Link to="/apartments">
               <Button variant="accent">Explore Apartments</Button>
             </Link>
             <Link to="/contact">
-              <Button className="border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-100">Contact Us</Button>
+              <Button variant="ghost">Contact Us</Button>
             </Link>
           </div>
         </div>
@@ -119,7 +119,7 @@ function AboutPage() {
           <h2 id="about-intro-title">A guest-first approach to apartment booking.</h2>
         </div>
         <p className="about-intro-copy">
-          Luxidency is built around the idea that accommodation should feel effortless, comfortable, and genuinely welcoming. We help guests discover apartment stays that support both leisure and practical living, with an emphasis on quality, trust, and a smooth overall stay experience. Whether guests are visiting for a short trip or looking for a more convenient place to stay, our goal is to make each booking feel simple, dependable, and premium.
+          Luxidency is built around the idea that apartment stays should feel effortless, comfortable, and genuinely welcoming. We help guests discover premium homes in Murree, Islamabad, and Lahore that support both leisure escapes and practical city stays. Whether you are planning a mountain getaway, a business trip, or a smooth family stay, our goal is to make booking feel simple, dependable, and beautifully premium from start to finish.
         </p>
       </section>
 
@@ -140,7 +140,7 @@ function AboutPage() {
           <p className="section-kicker">Our Hospitality</p>
           <h2 id="hospitality-title">Thoughtful stays shaped around guest comfort.</h2>
           <p>
-            Our hospitality approach is built on attention to detail, easy communication, and spaces that feel welcoming from the moment a guest arrives. We focus on apartment stays that are comfortable, convenient, and designed to feel like a calm, well-cared-for home rather than a rushed accommodation experience.
+            Our hospitality approach is built on attention to detail, easy communication, and spaces that feel welcoming from the moment a guest arrives. We focus on apartment stays across Murree, Islamabad, and Lahore that are comfortable, convenient, and designed to feel like a calm, well-cared-for home rather than a rushed accommodation experience.
           </p>
           <ul className="about-check-list">
             {hospitalityPoints.map((point) => (
@@ -189,7 +189,7 @@ function AboutPage() {
         </div>
         <div className="commitment-wrap">
           <p className="about-commitment-copy">
-            We are committed to creating apartment stays that feel comfortable, welcoming, and dependable. Our standards reflect a focus on quality accommodation, guest satisfaction, clear communication, and a consistent level of care that guests can trust when choosing their next stay.
+            We are committed to creating apartment stays that feel comfortable, welcoming, and dependable across Murree, Islamabad, and Lahore. Our standards reflect a focus on quality accommodation, guest satisfaction, clear communication, and a consistent level of care that guests can trust when choosing their next stay. Booking with Luxidency is designed to be easy, smooth, and reassuring at every step.
           </p>
           <ul className="about-check-list compact-list">
             {commitmentPoints.map((point) => (
@@ -209,7 +209,7 @@ function AboutPage() {
             <Button variant="accent">Explore Available Apartments</Button>
           </Link>
           <Link to="/contact">
-            <Button className="border-neutral-300 bg-white text-black hover:bg-neutral-100">Contact the Team</Button>
+            <Button variant="ghost">Contact the Team</Button>
           </Link>
         </div>
       </section>

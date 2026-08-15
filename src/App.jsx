@@ -1,4 +1,5 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import MainLayout from './layouts/MainLayout'
 import AboutPage from './pages/AboutPage'
 import ApartmentDetailsPage from './pages/ApartmentDetailsPage'
@@ -8,9 +9,20 @@ import HomePage from './pages/HomePage'
 import LocationsPage from './pages/LocationsPage'
 import NotFoundPage from './pages/NotFoundPage'
 
+function ScrollToTop() {
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [location.pathname])
+
+  return null
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />

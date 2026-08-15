@@ -3,9 +3,9 @@ import { ArrowRight, Building2, Compass, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import ApartmentGrid from '../components/ApartmentGrid'
 import Button from '../components/Button'
-import ContactSection from '../components/ContactSection'
 import Hero from '../components/Hero'
 import HeroSearchWidget from '../components/HeroSearchWidget'
+import HomeContactSection from '../components/HomeContactSection'
 import LocationCard from '../components/LocationCard'
 import { apartments } from '../data/apartments'
 import { locations } from '../data/locations'
@@ -163,11 +163,11 @@ function HomePage() {
                 <Link to="/apartments">
                   <Button variant="accent">Book Now</Button>
                 </Link>
-                <a href="#contact">
-                  <Button className="border-neutral-300 bg-neutral-100 text-neutral-900 hover:bg-neutral-200">
+                <Link to="/contact">
+                  <Button className="border-neutral-300 bg-neutral-100 text-neutral-900 transition-colors duration-200 hover:bg-neutral-900 hover:text-white hover:border-neutral-900">
                     Contact Us
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           )}
@@ -180,11 +180,9 @@ function HomePage() {
             hoveredPanel === 'contact' ? 'lg:flex-[2.1_1_0%]' : ''
           } ${hoveredPanel === 'book' ? 'lg:flex-[0.5_1_0%]' : ''}`}
         >
-          <ContactSection
-            className={`h-70 min-h-70 rounded-4xl border border-white/10 bg-[radial-gradient(circle_at_top,rgba(255,186,80,0.16),transparent_32%),#111111] shadow-[0_16px_36px_rgba(12,12,12,0.22)] ${
-              hoveredPanel === 'book' ? 'lg:px-4' : ''
-            }`}
+          <HomeContactSection
             compact={hoveredPanel === 'book'}
+            className={hoveredPanel === 'book' ? 'lg:px-4' : ''}
           />
         </div>
       </div>

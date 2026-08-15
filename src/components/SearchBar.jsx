@@ -125,7 +125,8 @@ function SearchBar({ filters, onChange, onSubmit }) {
 
         <Button
           type="submit"
-          className="flex h-12 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-6 text-sm font-semibold text-white shadow-none transition hover:bg-neutral-800 lg:w-auto"
+          variant="accent"
+          className="flex h-12 items-center justify-center gap-2 rounded-xl border border-neutral-900 bg-neutral-900 px-6 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(15,23,42,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-500 hover:bg-amber-500 hover:text-neutral-950 hover:shadow-[0_14px_28px_rgba(245,158,11,0.22)] lg:w-auto"
         >
           <Search className="h-4 w-4" />
           Apply
